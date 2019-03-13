@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #000000;
+  text-align: left;
+  color: white;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+#header {
+  display: flex;
+  height: 70px;
+  padding: 0px;
+  display: flex;
+  align-items: baseline
+}
+
+#header h1 {
+  flex: 0 0 250px;
+  padding: 10px;
+}
+
+#header div {
+  flex: 3;
+  text-align: right;
+  display: block;
+  padding-right: 10px;
+}
+
+#gnb {
+  background: #222222;
+  height: 38px;
+}
+
+#gnb ul{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-top: 7px;
+}
+
+#gnb li{
+  list-style-type:none;
+  display: block;
+
+}
+
+.gnblink { text-decoration: none; color: #ffffff; padding: 10px;}
+.gnblink:link { }
+.gnblink:visited { }
+.gnblink:visited:hover {  }
+.gnblink:hover { background-color: #000000; }
+.gnblink:active { background-color: #ff9900; }
+
+#lnb {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 0 0 150px;
+  background: #333333;
+}
+
+#lnb ul{
+  display: flex;
+  flex-direction: column;
+}
+
+#lnb li{
+  list-style-type: none;
+  display: block;
+}
+#lnb h3{
+  color: #ffffff;
+  padding: 5px;
+}
+.lnblink { text-decoration: none; display: block; color: #ffffff; padding: 5px 5px 5px 10px;}
+.lnblink:link { }
+.lnblink:visited { }
+.lnblink:visited:hover {  }
+.lnblink:hover { background-color: #000000; }
+.lnblink:active { background-color: #ff9900; }
+
+
+/* Style the content */
+article {
+  -webkit-flex: 5;
+  -ms-flex: 5;
+  flex: 5;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
