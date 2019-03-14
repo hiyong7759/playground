@@ -6,37 +6,37 @@
   margin: 0px;
 }
 
+a { text-decoration: none; color: #999999; padding: 5px;}
+a:link { }
+a:visited { }
+a:visited:hover {  }
+a:hover { color: #cccccc; }
+a:active { color: #ff9900; }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Style the header */
 header {
-  background-color: #000000;
-  text-align: left;
-  color: white;
-}
-
-/* Container for flexboxes */
-section {
-  display: -webkit-flex;
   display: flex;
-}
-
-#header {
-  display: flex;
+  flex-direction: row;
+  align-items: baseline;
   height: 70px;
+  width: 100%;
   padding: 0px;
-  display: flex;
-  align-items: baseline
+  background: #000000;
+  color: #ffffff;
 }
 
-#header h1 {
+header > h1 {
   flex: 0 0 250px;
   padding: 10px;
 }
 
-#header div {
+header > div {
   flex: 3;
   text-align: right;
   display: block;
@@ -44,12 +44,18 @@ section {
 }
 
 #gnb {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
   background: #222222;
+  color: #ffffff;
   height: 38px;
+  width: 100%;
 }
 
 #gnb ul{
   display: flex;
+  flex: 9;
   flex-wrap: wrap;
   margin: 0;
   padding-top: 7px;
@@ -68,11 +74,34 @@ section {
 .gnblink:hover { background-color: #000000; }
 .gnblink:active { background-color: #ff9900; }
 
+.gnbFixed {
+  position: fixed;
+  top: 0px;
+}
+.sectionpadding {
+  position: static;
+  top: 108px;
+}
+#search {
+  flex: 1;
+  text-align: right;
+  display: block;
+  padding-right: 10px;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
 #lnb {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 0 0 150px;
   background: #333333;
+  /* height: 700px; */
+  overflow-y: scroll;
 }
 
 #lnb ul{
@@ -103,14 +132,17 @@ article {
   flex: 5;
   background-color: #f1f1f1;
   padding: 10px;
+  overflow-y: scroll;
 }
 
 /* Style the footer */
 footer {
-  background-color: #777;
-  padding: 10px;
   text-align: center;
-  color: white;
+  font-size: 13px;
+  height: 70px;
+  padding-top: 10px;
+  background: #000000;
+  color: #dddddd;
 }
 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
