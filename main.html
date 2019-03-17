@@ -11,29 +11,6 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script language="JavaScript" type="text/javascript">
-    var innerHeight = window.innerHeight;
-    var x = 0;
-    $(document).ready(function(){
-      var gnbOffset = $('#gnb').offset();
-      $("button").click(function(){
-        var x = $("#gnb").offset();
-        alert("Top: " + x.top + " Left: " + x.left);
-      });
-        $( window ).scroll( function() {
-          if ( $(document).scrollTop() > gnbOffset.top ) {
-            $('#gnb').addClass('gnbFixed');
-
-          }
-          else {
-            $( '#gnb' ).removeClass('gnbFixed');
-
-          }
-        });
-      $('section').css('height', $(window).innerHeight()-180);
-      $(window).resize(function() {
-        $('section').css('height', $(window).innerHeight()-180);
-      });
-    });
 
   </script>
 
@@ -45,11 +22,13 @@
 </header>
 
 <nav id="gnb">
+  <div id="home">
+    <a href="./main.html">홈</a>
+  </div>
   <ul>
-    <li><a class="gnblink" href="./main.html">홈</a></li>
-    <li><a class="gnblink" href="#">메뉴1</a></li>
-    <li><a class="gnblink" href="#">메뉴2</a></li>
-    <li><a class="gnblink" href="#">메뉴3</a></li>
+    <li><a class="active" href="#">대메뉴1</a></li>
+    <li><a href="#">대메뉴2</a></li>
+    <li><a href="#">대메뉴3</a></li>
   </ul>
   <div id="search">
     <a href="#">검색</a>
@@ -57,104 +36,208 @@
 </nav>
 <section>
   <nav id="lnb">
-    <h3>중간타이틀</h3>
+    <h2>중간타이틀</h2>
     <ul>
-      <li><a class="lnblink" href="./menu1.html">메뉴1</a></li>
-      <li><a class="lnblink" href="#">메뉴2</a></li>
-      <li><a class="lnblink" href="#">메뉴3</a></li>
+      <li><a class="active" href="./menu1.html">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
     </ul>
-    <h3>중간타이틀</h3>
+    <h2>중간타이틀</h2>
     <ul>
-      <li><a class="lnblink" href="#">메뉴1</a></li>
-      <li><a class="lnblink" href="#">메뉴2</a></li>
-      <li><a class="lnblink" href="#">메뉴3</a></li>
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
     </ul>
-    <h3>중간타이틀</h3>
+    <h2>중간타이틀</h2>
     <ul>
-      <li><a class="lnblink" href="#">메뉴1</a></li>
-      <li><a class="lnblink" href="#">메뉴2</a></li>
-      <li><a class="lnblink" href="#">메뉴3</a></li>
+      <li><a href="./menu1.html">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
     </ul>
-    <h3>중간타이틀</h3>
+    <h2>중간타이틀</h2>
     <ul>
-      <li><a class="lnblink" href="#">메뉴1</a></li>
-      <li><a class="lnblink" href="#">메뉴2</a></li>
-      <li><a class="lnblink" href="#">메뉴3</a></li>
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
     </ul>
-    <h3>중간타이틀</h3>
+    <h2>중간타이틀</h2>
     <ul>
-      <li><a class="lnblink" href="#">메뉴1</a></li>
-      <li><a class="lnblink" href="#">메뉴2</a></li>
-      <li><a class="lnblink" href="#">메뉴3</a></li>
+      <li><a href="./menu1.html">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
     </ul>
-    <h3>중간타이틀</h3>
+    <h2>중간타이틀</h2>
     <ul>
-      <li><a class="lnblink" href="#">메뉴1</a></li>
-      <li><a class="lnblink" href="#">메뉴2</a></li>
-      <li><a class="lnblink" href="#">메뉴3</a></li>
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
     </ul>
-    <h3>중간타이틀</h3>
+    <h2>중간타이틀</h2>
     <ul>
-      <li><a class="lnblink" href="#">메뉴1</a></li>
-      <li><a class="lnblink" href="#">메뉴2</a></li>
-      <li><a class="lnblink" href="#">메뉴3</a></li>
+      <li><a href="./menu1.html">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
     </ul>
-    <h3>중간타이틀</h3>
+    <h2>중간타이틀</h2>
     <ul>
-      <li><a class="lnblink" href="#">메뉴1</a></li>
-      <li><a class="lnblink" href="#">메뉴2</a></li>
-      <li><a class="lnblink" href="#">메뉴3</a></li>
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
     </ul>
-    <h3>중간타이틀</h3>
+    <h2>중간타이틀</h2>
     <ul>
-      <li><a class="lnblink" href="#">메뉴1</a></li>
-      <li><a class="lnblink" href="#">메뉴2</a></li>
-      <li><a class="lnblink" href="#">메뉴3</a></li>
+      <li><a href="./menu1.html">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
     </ul>
-    <h3>중간타이틀</h3>
+    <h2>중간타이틀</h2>
     <ul>
-      <li><a class="lnblink" href="#">메뉴1</a></li>
-      <li><a class="lnblink" href="#">메뉴2</a></li>
-      <li><a class="lnblink" href="#">메뉴3</a></li>
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
     </ul>
-    <h3>중간타이틀</h3>
+    <h2>중간타이틀</h2>
     <ul>
-      <li><a class="lnblink" href="#">메뉴1</a></li>
-      <li><a class="lnblink" href="#">메뉴2</a></li>
-      <li><a class="lnblink" href="#">메뉴3</a></li>
+      <li><a href="./menu1.html">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
     </ul>
-    <h3>중간타이틀</h3>
+    <h2>중간타이틀</h2>
     <ul>
-      <li><a class="lnblink" href="#">메뉴1</a></li>
-      <li><a class="lnblink" href="#">메뉴2</a></li>
-      <li><a class="lnblink" href="#">메뉴3</a></li>
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
     </ul>
-    <h3>중간타이틀</h3>
+    <h2>중간타이틀</h2>
     <ul>
-      <li><a class="lnblink" href="#">메뉴1</a></li>
-      <li><a class="lnblink" href="#">메뉴2</a></li>
-      <li><a class="lnblink" href="#">메뉴3</a></li>
+      <li><a href="./menu1.html">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
+    </ul>
+    <h2>중간타이틀</h2>
+    <ul>
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
+    </ul>
+    <h2>중간타이틀</h2>
+    <ul>
+      <li><a href="./menu1.html">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
+    </ul>
+    <h2>중간타이틀</h2>
+    <ul>
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
     </ul>
   </nav>
   <article>
-    <h1>London</h1>
-    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <script>
+    var pathname = window.location.pathname,
+      search  = window.location.search,
+      URL = pathname + search,
+      cateNum = search.substr(24,2);
+      document.write( '<p>pathname : ' + pathname + '</p>' );
+      document.write( '<p>search : ' + search + '</p>' );
+      document.write( '<p>URL : ' + URL + '</p>' );
+      document.write( '<p>cateNum : ' + cateNum + '</p>' );
+    </script>
+    <h3>콘텐츠영역타이틀</h3>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
+    <p>본문</p>
 
     <button>Return the offset coordinates of the p element</button>
   </article>
 </section>
 
 <footer>
-  <p>더나은놀이터는 웹개발을 위한 학습의 장으로 사용하기 위해 만들었습니다.</p>
+  <p>더나은놀이터는 웹개발을 위한 학습장으로 사용하기 위해 만들었습니다.</p>
   <p>Copyright 2018-2019 by DeoNaEun. All Rights Reserved.</p>
   <a href="http://www.deonaeun.com">deonaeun.com</a>
 </footer>
