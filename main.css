@@ -4,9 +4,10 @@
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
+  color: #fff;
 }
 
-a { text-decoration: none; color: #999999; padding: 5px;}
+a { text-decoration: none; color: #ffffff; padding: 5px;}
 a:link { }
 a:visited { }
 a:visited:hover {  }
@@ -28,7 +29,7 @@ header {
   width: 100%;
   padding: 0px;
   background: #000000;
-  color: #ffffff;
+  flex-shrink: 0;
 }
 
 header > h1 {
@@ -48,7 +49,6 @@ header > div {
   flex-direction: row;
   align-items: baseline;
   background: #222222;
-  color: #ffffff;
   height: 38px;
   width: 100%;
 }
@@ -67,10 +67,8 @@ header > div {
 
 }
 
-.gnblink { text-decoration: none; color: #ffffff; padding: 10px;}
-.gnblink:link { }
-.gnblink:visited { }
-.gnblink:visited:hover {  }
+.gnblink { text-decoration: none; padding: 10px;}
+/* .gnblink:visited { background-color: #ff9900; } */
 .gnblink:hover { background-color: #000000; }
 .gnblink:active { background-color: #ff9900; }
 
@@ -78,10 +76,7 @@ header > div {
   position: fixed;
   top: 0px;
 }
-.sectionpadding {
-  position: static;
-  top: 108px;
-}
+
 #search {
   flex: 1;
   text-align: right;
@@ -93,6 +88,7 @@ header > div {
 section {
   display: -webkit-flex;
   display: flex;
+  flex-shrink: 0;
 }
 
 #lnb {
@@ -102,6 +98,7 @@ section {
   background: #333333;
   /* height: 700px; */
   overflow-y: scroll;
+  /* flex-shrink: 0; */
 }
 
 #lnb ul{
@@ -114,25 +111,23 @@ section {
   display: block;
 }
 #lnb h3{
-  color: #ffffff;
   padding: 5px;
 }
-.lnblink { text-decoration: none; display: block; color: #ffffff; padding: 5px 5px 5px 10px;}
-.lnblink:link { }
-.lnblink:visited { }
-.lnblink:visited:hover {  }
+.lnblink { text-decoration: none; display: block; padding: 5px 5px 5px 10px;}
 .lnblink:hover { background-color: #000000; }
 .lnblink:active { background-color: #ff9900; }
 
+.content {
+  width: 100%;
+}
 
 /* Style the content */
 article {
   -webkit-flex: 5;
   -ms-flex: 5;
   flex: 5;
-  background-color: #f1f1f1;
+  background-color: #111;
   padding: 10px;
-  overflow-y: scroll;
 }
 
 /* Style the footer */
@@ -142,7 +137,7 @@ footer {
   height: 70px;
   padding-top: 10px;
   background: #000000;
-  color: #dddddd;
+  color: #999;
 }
 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
