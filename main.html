@@ -29,9 +29,14 @@
   <h1>
     <a href="/">
       <img id="logo" src="./images/common/deonaeun.logo" alt="(주)더나은">
-    </a>더나은놀이터
+    </a>
+    더나은놀이터
   </h1>
-  <div class="util">웹에서 할 수 있는 모든걸 해보자[util 영역]</div>
+  <div class="util">
+    <ul>
+      <li><a href="#">로그인</a></li>
+    </ul>
+  </div>
 </header>
 
 <nav id="gnb">
@@ -87,9 +92,9 @@
         <font>홈 > 1레벨 > 2레벨 > 3레벨</font>
       </div>
       <div class="content_button">
-        <button type="button" class="button_list">목록</button>
-        <button type="button" class="button_list">등록</button>
-        <button type="button" class="button_list">공유</button>
+        <button type="button" class="btn_list">목록</button>
+        <button type="button" class="btn_list">등록</button>
+        <button type="button" class="btn_list">공유</button>
       </div>
     </div>
 
@@ -107,14 +112,32 @@
       <h3>콘텐츠영역1차타이틀</h3>
       <h4>콘텐츠영역2차타이틀</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <table>
+      <div class="table_util">
+        <div class="list_count">
+          <font>총 <span>11</span> 건</font>
+        </div>
+        <div class="list_util">
+          <select id="align_list" name="">
+            <option value="01" selected="selected">최신순</option>
+            <option value="02">ㄱㄴㄷ오름차순</option>
+            <option value="03">내림차순</option>
+          </select>
+          <select id="view_list" name="">
+            <option value="01" selected="selected">10개씩</option>
+            <option value="02">30개씩</option>
+            <option value="03">50개씩</option>
+          </select>
+          <button type="button" class="view_btn">보기</button>
+        </div>
+      </div>
+      <table class="horizontal_table">
         <caption>테이블요약설명입</caption>
         <colgroup>
-          <col width="10%" />
-          <col width="20%" />
-          <col width="*" />
-          <col width="20%" />
-          <col width="20%" />
+          <col style="width=10%" />
+          <col style="width=20%" />
+          <col style="width=*" />
+          <col style="width=20%" />
+          <col style="width=20%" />
         </colgroup>
         <thead>
           <tr>
@@ -142,173 +165,85 @@
           </tr>
         </tbody>
       </table>
-      <table>
-  			<caption>공채속보목록</caption>
+      <table class="vertical_table">
+  			<caption>세로형 테이블</caption>
   			<colgroup>
-  				<col style="width: 129px">
-  				<col>
+  				<col style="width=200px" />
+  				<col style="width=*" />
   			</colgroup>
   			<tbody>
   				<tr>
-  					<th>고용형태</th>
+  					<th>라디오박스 항목</th>
   					<td>
   						<span class="radio_box">
-  							<input type="radio" id="searchEmpWantedType0" name="searchEmpWantedType" value="" checked="checked">
-  							<label for="searchEmpWantedType0">전체</label>
+  							<input type="radio" id="searchRadio0" name="search_radio" value="" checked="checked">
+  							<label for="searchRadio0">전체</label>
   						</span>
   						<span class="radio_box">
-  							<input type="radio" id="searchEmpWantedType1" name="searchEmpWantedType" value="01">
-  							<label for="searchEmpWantedType1">정규직</label>
+  							<input type="radio" id="searchRadio1" name="search_radio" value="">
+  							<label for="searchRadio1">항목1</label>
   						</span>
   						<span class="radio_box">
-  							<input type="radio" id="searchEmpWantedType2" name="searchEmpWantedType" value="02">
-  							<label for="searchEmpWantedType2">정규직전환형</label>
+  							<input type="radio" id="ssearchRadio2" name="search_radio"  value="">
+  							<label for="searchRadio2">항목2</label>
   						</span>
   						<span class="radio_box">
-  							<input type="radio" id="searchEmpWantedType3" name="searchEmpWantedType" value="03">
-  							<label for="searchEmpWantedType3">비정규직</label>
-  						</span>
-  						<span class="radio_box">
-  							<input type="radio" id="searchEmpWantedType4" name="searchEmpWantedType" value="04">
-  							<label for="searchEmpWantedType4">기간제</label>
-  						</span>
-  						<span class="radio_box">
-  							<input type="radio" id="searchEmpWantedType5" name="searchEmpWantedType" value="05">
-  							<label for="searchEmpWantedType5">시간선택제</label>
-  						</span>
-                          <span class="radio_box">
-                              <input type="radio" id="searchEmpWantedType6" name="searchEmpWantedType" value="06">
-                              <label for="searchEmpWantedType6">기타</label>
-                          </span>
+                  <input type="radio" id="searchRadio3" name="search_radio"  value="">
+                  <label for="searchRadio3">기타</label>
+              </span>
   					</td>
   				</tr>
   				<tr>
-  					<th>게시여부</th>
+  					<th>체크박스 항목</th>
   					<td>
-  						<span class="radio_box">
-  							<input type="radio" id="searchUseYn0" name="searchUseYn" value="" checked="checked">
-  							<label for="searchUseYn0">전체</label>
+  						<span class="check_box">
+  							<input type="checkbox" id="searchCheck0" name="search_check" value="" checked="checked">
+  							<label for="searchCheck0">전체</label>
   						</span>
-  						<span class="radio_box">
-  							<input type="radio" id="searchUseYnY" name="searchUseYn" value="Y">
-  							<label for="searchUseYnY">게시</label>
+              <span class="check_box">
+  							<input type="checkbox" id="searchCheck1" name="search_check" value="">
+  							<label for="searchCheck1">항목1</label>
   						</span>
-  						<span class="radio_box">
-  							<input type="radio" id="searchUseYnN" name="searchUseYn" value="N">
-  							<label for="searchUseYnN">게시안함</label>
+              <span class="check_box">
+  							<input type="checkbox" id="searchCheck2" name="search_check" value="">
+  							<label for="searchCheck2">항목2</label>
   						</span>
-  						<span class="radio_box">
-  							<input type="radio" id="searchUseYnC" name="searchUseYn" value="C">
-  							<label for="searchUseYnC">마감 (게시 공채속보 중 마감일이 지난 자료)</label>
+              <span class="check_box">
+  							<input type="checkbox" id="searchCheck3" name="search_check" value="">
+  							<label for="searchCheck3">기타</label>
   						</span>
   					</td>
   				</tr>
   				<tr>
-  					<th>기업구분</th>
-  					<td>
-  						<span class="radio_box">
-  							<input type="radio" id="division0" name="searchCoclcd" value="" checked="checked">
-  							<label for="division0">전체</label>
-  						</span>
-
-  							<span class="radio_box">
-  								<input type="radio" name="searchCoclcd" id="ad_division0" value="10">
-  								<label for="ad_division0">대기업</label>
-  							</span>
-
-  							<span class="radio_box">
-  								<input type="radio" name="searchCoclcd" id="ad_division1" value="20">
-  								<label for="ad_division1">공기업</label>
-  							</span>
-
-  							<span class="radio_box">
-  								<input type="radio" name="searchCoclcd" id="ad_division2" value="30">
-  								<label for="ad_division2">공공기관</label>
-  							</span>
-
-  							<span class="radio_box">
-  								<input type="radio" name="searchCoclcd" id="ad_division3" value="40">
-  								<label for="ad_division3">중견기업</label>
-  							</span>
-
-  							<span class="radio_box">
-  								<input type="radio" name="searchCoclcd" id="ad_division4" value="60">
-  								<label for="ad_division4">강소기업</label>
-  							</span>
-
-  							<span class="radio_box">
-  								<input type="radio" name="searchCoclcd" id="ad_division5" value="50">
-  								<label for="ad_division5">외국계기업</label>
-  							</span>
-
-  					</td>
-  				</tr>
-  				<tr>
-  					<th>서류접수 기간</th>
+  					<th>데이트피커 항목</th>
   					<td>
   						<div class="date_box">
-  							<input type="text" class="calendar cal-aready" id="searchEmpWantedStdt" name="searchEmpWantedStdt" maxlength="8" title="시작일자" value=""><button type="button" class="cal-aready" id="searchEmpWantedStdtOpenCalendarButton" name="searchEmpWantedStdtOpenCalendarButton" style="position: relative; display: inline; vertical-align: middle; border: 0px; cursor: pointer; background-image: url(&quot;https://www.work.go.kr/js/framework/latte/calendar/img/btn_cal.gif&quot;); margin: 0px 2px 1px -16px; height: 16px; width: 14px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><span style="position:absolute;left:0;top:0;height:0;width:0;visibility:hidden;overflow:hidden">날짜 선택</span></button>
+  							<input type="text" class="calendar cal-aready" id="searchEmpWantedStdt" name="searchEmpWantedStdt" maxlength="8" title="시작일자" value="">
   							<span>~</span>
-  							<input type="text" class="calendar cal-aready" id="searchEmpWantedEndt" name="searchEmpWantedEndt" maxlength="8" title="종료일자" value=""><button type="button" class="cal-aready" id="searchEmpWantedEndtOpenCalendarButton" name="searchEmpWantedEndtOpenCalendarButton" style="position: relative; display: inline; vertical-align: middle; border: 0px; cursor: pointer; background-image: url(&quot;https://www.work.go.kr/js/framework/latte/calendar/img/btn_cal.gif&quot;); margin: 0px 2px 1px -16px; height: 16px; width: 14px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><span style="position:absolute;left:0;top:0;height:0;width:0;visibility:hidden;overflow:hidden">날짜 선택</span></button>
+  							<input type="text" class="calendar cal-aready" id="searchEmpWantedEndt" name="searchEmpWantedEndt" maxlength="8" title="종료일자" value="">
   						</div>
   					</td>
   				</tr>
   				<tr>
-  					<th>검색구분</th>
+  					<th>선택후입력구분</th>
   					<td class="sel_input">
   						<div class="l_box">
   							<select id="searchGb" name="searchGb">
-
-
-  										<option value="emp_busi_nm" selected="selected">회사명</option>
-
-
-
-  								<option value="emp_write_nm">
-  									작성자명
-  								</option>
-  								<option value="emp_title">
-  									채용제목
-  								</option>
+  								<option value="01" selected="selected">항목1</option>
+  								<option value="02">항목2</option>
+  								<option value="03">항목3</option>
   							</select>
   						</div>
   						<div class="r_box">
-  							<input type="text" id="searchText" name="searchText" class="w340" title="검색어 입력" value="">
-  					</div></td>
+  							<input type="text" id="searchText" name="searchText" class="w340" title="검색어 입력" value="" placeholder="검색어입력">
+    					</div>
+            </td>
   				</tr>
   				<tr>
-  					<th>등록일자</th>
+  					<th>textArea</th>
   					<td>
   						<div class="date_box">
-  							<input type="text" class="calendar cal-aready" id="searchSregDtmFrom" name="searchSregDtmFrom" maxlength="8" title="시작일자" value=""><button type="button" class="cal-aready" id="searchSregDtmFromOpenCalendarButton" name="searchSregDtmFromOpenCalendarButton" style="position: relative; display: inline; vertical-align: middle; border: 0px; cursor: pointer; background-image: url(&quot;https://www.work.go.kr/js/framework/latte/calendar/img/btn_cal.gif&quot;); margin: 0px 2px 1px -16px; height: 16px; width: 14px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><span style="position:absolute;left:0;top:0;height:0;width:0;visibility:hidden;overflow:hidden">날짜 선택</span></button>
-  							<span>~</span>
-  							<input type="text" class="calendar cal-aready" id="searchSregDtmTo" name="searchSregDtmTo" maxlength="8" title="종료일자" value=""><button type="button" class="cal-aready" id="searchSregDtmToOpenCalendarButton" name="searchSregDtmToOpenCalendarButton" style="position: relative; display: inline; vertical-align: middle; border: 0px; cursor: pointer; background-image: url(&quot;https://www.work.go.kr/js/framework/latte/calendar/img/btn_cal.gif&quot;); margin: 0px 2px 1px -16px; height: 16px; width: 14px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><span style="position:absolute;left:0;top:0;height:0;width:0;visibility:hidden;overflow:hidden">날짜 선택</span></button>
-  						</div>
-  						<div class="option_box">
-  							<span class="radio_box">
-  								<input type="radio" id="searchTermDate0" name="searchTermDate" value="" checked="checked">
-  								<label for="searchTermDate0">전체</label>
-  							</span>
-  							<span class="radio_box">
-  								<input type="radio" id="searchTermDate1" name="searchTermDate" value="01">
-  								<label for="searchTermDate1">오늘</label>
-  							</span>
-  							<span class="radio_box">
-  								<input type="radio" id="searchTermDate3" name="searchTermDate" value="03">
-  								<label for="searchTermDate3">3일</label>
-  							</span>
-  							<span class="radio_box">
-  								<input type="radio" id="searchTermDate1W" name="searchTermDate" value="1W">
-  								<label for="searchTermDate1W">1주이내</label>
-  							</span>
-  							<span class="radio_box">
-  								<input type="radio" id="searchTermDate2W" name="searchTermDate" value="2W">
-  								<label for="searchTermDate2W">2주 이내</label>
-  							</span>
-  							<span class="radio_box">
-  								<input type="radio" id="searchTermDate1M" name="searchTermDate" value="1M">
-  								<label for="searchTermDate1M">한달</label>
-  							</span>
+  							<textarea name="name" rows="3" cols="80"></textarea>
   						</div>
   					</td>
   				</tr>
@@ -319,9 +254,11 @@
       <p>더나은놀이터는 웹개발 학습장입니다.</p>
       <p>Copyright 2018-2019 by deonaeun. All Rights Reserved.</p>
       <div id="footerMenu">
-        <a href="#">이용약관</a>
-        <a href="#">개인정보처리방침</a>
-        <a href="#">고객센터</a>
+        <ul>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">고객센터</a></li>
+        </ul>
         <a href="http://www.deonaeun.com">deonaeun.com</a>
       </div>
     </footer>
