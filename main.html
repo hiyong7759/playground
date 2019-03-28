@@ -92,9 +92,9 @@
         <font>홈 > 1레벨 > 2레벨 > 3레벨</font>
       </div>
       <div class="content_button">
-        <button type="button" class="btn_list">목록</button>
-        <button type="button" class="btn_list">등록</button>
-        <button type="button" class="btn_list">공유</button>
+        <button type="button">목록</button>
+        <button type="button">등록</button>
+        <button type="button">공유</button>
       </div>
     </div>
 
@@ -127,17 +127,17 @@
             <option value="02">30개씩</option>
             <option value="03">50개씩</option>
           </select>
-          <button type="button" class="view_btn">보기</button>
+          <button type="button">보기</button>
         </div>
       </div>
-      <table class="horizontal_table">
-        <caption>테이블요약설명입</caption>
+      <table class="list_table">
+        <caption>목록 테이블</caption>
         <colgroup>
-          <col style="width=10%" />
-          <col style="width=20%" />
-          <col style="width=*" />
-          <col style="width=20%" />
-          <col style="width=20%" />
+          <col style="width: 10%" />
+          <col style="width: 20%" />
+          <col />
+          <col style="width: 20%" />
+          <col style="width: 20%" />
         </colgroup>
         <thead>
           <tr>
@@ -165,62 +165,79 @@
           </tr>
         </tbody>
       </table>
-      <table class="vertical_table">
-  			<caption>세로형 테이블</caption>
+      <div class="paging">
+        <a href="#" class=""><<</a>
+        <a href="#" class=""><</a>
+        <strong>1</strong>
+        <a href="#" class="">2</a>
+        <a href="#" class="">3</a>
+        <a href="#" class="">4</a>
+        <a href="#" class="">5</a>
+        <a href="#" class="">6</a>
+        <a href="#" class="">7</a>
+        <a href="#" class="">8</a>
+        <a href="#" class="">9</a>
+        <a href="#" class="">10</a>
+        <a href="#" class="">></a>
+        <a href="#" class="">>></a>
+      </div>
+      <h3>등록수정 테이블</h3>
+      <table class="insert_table">
+  			<caption>등록수정 테이블</caption>
   			<colgroup>
-  				<col style="width=200px" />
-  				<col style="width=*" />
+  				<col style="width: 150px" />
+  				<col  />
   			</colgroup>
   			<tbody>
   				<tr>
   					<th>라디오박스 항목</th>
   					<td>
-  						<span class="radio_box">
+  						<div class="radio_box">
   							<input type="radio" id="searchRadio0" name="search_radio" value="" checked="checked">
   							<label for="searchRadio0">전체</label>
-  						</span>
-  						<span class="radio_box">
+  						</div>
+  						<div class="radio_box">
   							<input type="radio" id="searchRadio1" name="search_radio" value="">
   							<label for="searchRadio1">항목1</label>
-  						</span>
-  						<span class="radio_box">
+  						</div>
+  						<div class="radio_box">
   							<input type="radio" id="ssearchRadio2" name="search_radio"  value="">
   							<label for="searchRadio2">항목2</label>
-  						</span>
-  						<span class="radio_box">
+  						</div>
+  						<div class="radio_box">
                   <input type="radio" id="searchRadio3" name="search_radio"  value="">
                   <label for="searchRadio3">기타</label>
-              </span>
+              </div>
   					</td>
   				</tr>
   				<tr>
   					<th>체크박스 항목</th>
   					<td>
-  						<span class="check_box">
+  						<div class="check_box">
   							<input type="checkbox" id="searchCheck0" name="search_check" value="" checked="checked">
   							<label for="searchCheck0">전체</label>
-  						</span>
-              <span class="check_box">
+  						</div>
+              <div class="check_box">
   							<input type="checkbox" id="searchCheck1" name="search_check" value="">
   							<label for="searchCheck1">항목1</label>
-  						</span>
-              <span class="check_box">
+  						</div>
+              <div class="check_box">
   							<input type="checkbox" id="searchCheck2" name="search_check" value="">
   							<label for="searchCheck2">항목2</label>
-  						</span>
-              <span class="check_box">
+  						</div>
+              <div class="check_box">
   							<input type="checkbox" id="searchCheck3" name="search_check" value="">
   							<label for="searchCheck3">기타</label>
-  						</span>
+  						</div>
   					</td>
   				</tr>
   				<tr>
-  					<th>데이트피커 항목</th>
+  					<th>날짜검색 항목</th>
   					<td>
   						<div class="date_box">
-  							<input type="text" class="calendar cal-aready" id="searchEmpWantedStdt" name="searchEmpWantedStdt" maxlength="8" title="시작일자" value="">
-  							<span>~</span>
-  							<input type="text" class="calendar cal-aready" id="searchEmpWantedEndt" name="searchEmpWantedEndt" maxlength="8" title="종료일자" value="">
+  							<input type="text" id="searchEmpWantedStdt" maxlength="8" title="시작일자" placeholder="시작일자 8자리 입력 (YYYYMMDD)" value="">
+  							~
+  							<input type="text" id="searchEmpWantedEndt" maxlength="8" title="종료일자" placeholder="종료일자 8자리 입력 (YYYYMMDD)" value="">
   						</div>
   					</td>
   				</tr>
@@ -239,16 +256,26 @@
     					</div>
             </td>
   				</tr>
+          <tr>
+            <th>inputBox</th>
+            <td>
+              <input type="text" id="" name="" class="input_box" title="텍스트입력" value="" placeholder="텍스트입력">
+            </td>
+          </tr>
   				<tr>
   					<th>textArea</th>
   					<td>
-  						<div class="date_box">
-  							<textarea name="name" rows="3" cols="80"></textarea>
-  						</div>
+  						<textarea name="name" rows="3" placeholder="텍스트입력 3줄"></textarea>
   					</td>
   				</tr>
   			</tbody>
   		</table>
+      <div class="list_button">
+        <button type="button" class="btn_list">등록</button>
+        <button type="button" class="btn_list">수정</button>
+        <button type="button" class="btn_list">삭제</button>
+        <button type="button" class="btn_list">미리보기</button>
+      </div>
     </article>
     <footer>
       <p>더나은놀이터는 웹개발 학습장입니다.</p>
