@@ -24,6 +24,13 @@ a:visited:hover {  }
 a:hover { color: #ccc; }
 a:active { color: #f90; }
 
+/* Style the header */
+header { display: flex; align-items: baseline; height: 50px; background: #000;}
+header > h1 { flex: 0 0 300px; padding: 10px; font-size: 20px; }
+header > div { flex: 3; text-align: right; display: block; padding-right: 10px; }
+header img { height: 30px; }
+
+body { display: flex; flex-direction: column; font-family: Arial, Helvetica, sans-serif; font-size: 14px;}
 input, textarea { padding: 5px; border: none; background-color: #000; }
 input[type=text], textarea { height: 30px; width: 100% }
 button { height: 38px; padding: 9px ; border: 1px solid #000; background-color: #555; font-size: 12px; cursor: pointer; }
@@ -32,14 +39,6 @@ select option { pacolor: #fff; }
 
 h3 { font-size: 18px; margin-top: 10px;}
 h4 { font-size: 16px; margin-top: 10px;}
-
-body { display: flex; flex-direction: column; font-family: Arial, Helvetica, sans-serif; font-size: 14px;}
-
-/* Style the header */
-header { display: flex; align-items: baseline; height: 50px; background: #000;}
-header > h1 { flex: 0 0 300px; padding: 10px; font-size: 20px; }
-header > div { flex: 3; text-align: right; display: block; padding-right: 10px; }
-header img { height: 30px; }
 
 /* nav 공통 */
 nav a:hover { background-color: #000; }
@@ -97,14 +96,15 @@ article { overflow-y: auto; width: 100%; height: 100%; padding: 10px; background
 
 /* 목록테이블 스타일 */
 table { width: 100%; margin-top: 10px; border-top: 1px solid #000; border-collapse: collapse; background: #222; }
-th, td { height: 40px; padding: 1px; border-bottom: 1px solid #000; text-align: center; }
+th, td { height: 40px; padding: 0 5px 0 5px; border-bottom: 1px solid #000; text-align: center; }
 td { background: #333; text-align: left; }
-.sel_input { display: flex;}
+table select { height:30px;}
+.sel_input { display: flex; padding: 5px;}
 .radio_box, .check_box {display: inline; margin-right: 10px;}
 .paging {display: flex; justify-content: center; align-items: center; margin-top: 10px; }
 .paging a, strong{ height: 30px; min-width: 30px; text-align: center; padding-top: 7px ; border: 1px solid #000; background-color: #555; font-size: 12px; cursor: pointer; }
 
-.list_button {display: flex; justify-content: flex-end; margin-top: 10px;}
+.table_button {display: flex; justify-content: flex-end; margin-top: 10px;}
 
 caption { display: none;}
 
@@ -153,7 +153,4 @@ footer {  height: 70px; padding-top: 10px; background: #000; text-align: center;
   .lnb .lnb_set { flex-direction: row; }
   .lnb ul { flex-direction: row; }
   .lnb a { display: block; padding: 10px; color: #fff; }
-
-
-
 }
