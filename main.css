@@ -26,7 +26,7 @@ a:active { color: #f90; }
 
 /* Style the header */
 header { display: flex; align-items: baseline; height: 50px; background: #000;}
-header > h1 { flex: 0 0 300px; padding: 10px; font-size: 20px; }
+header > h1 { flex: 0 0 210px; padding: 10px; font-size: 20px; }
 header > div { flex: 3; text-align: right; display: block; padding-right: 10px; }
 header img { height: 30px; }
 
@@ -91,10 +91,10 @@ article { overflow-y: auto; width: 100%; height: 100%; padding: 10px; background
 .list_count { flex: 0 0 100px; }
 .list_count span { color: #f90; }
 .list_util { display: flex; justify-content: flex-end; align-items: center; height: 40px; }
-.date_box { display: flex; justify-content: flex-start; }
+.date_box { display: flex; justify-content: flex-start; align-items: center;}
 
 
-/* 목록테이블 스타일 */
+/* 테이블 스타일 */
 table { width: 100%; margin-top: 10px; border-top: 1px solid #000; border-collapse: collapse; background: #222; }
 th, td { height: 40px; padding: 0 5px 0 5px; border-bottom: 1px solid #000; text-align: center; }
 td { background: #333; text-align: left; }
@@ -102,7 +102,7 @@ table select { height:30px;}
 .sel_input { display: flex; padding: 5px;}
 .radio_box, .check_box {display: inline; margin-right: 10px;}
 .paging {display: flex; justify-content: center; align-items: center; margin-top: 10px; }
-.paging a, strong{ height: 30px; min-width: 30px; text-align: center; padding-top: 7px ; border: 1px solid #000; background-color: #555; font-size: 12px; cursor: pointer; }
+.paging a, .paging strong{ height: 30px; min-width: 30px; text-align: center; padding-top: 7px ; border: 1px solid #000; background-color: #555; font-size: 12px; cursor: pointer; }
 
 .table_button {display: flex; justify-content: flex-end; margin-top: 10px;}
 
@@ -115,8 +115,6 @@ footer {  height: 70px; padding-top: 10px; background: #000; text-align: center;
 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
-  header > div { display: none}
-
   .search_form { display: none; }
   .lnb { display: none; }
 
@@ -130,18 +128,13 @@ footer {  height: 70px; padding-top: 10px; background: #000; text-align: center;
 }
 
 @media (max-width: 360px) {
-  header > div { display: none; }
-
   .search_form { display: none; }
 
   /* 검색버튼 클릭 시 검색입력창 생성토글 */
   .searchTrigger { display: block; }
   .search_form_display_on { display: flex; }
 
-  section {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
+
   .lnb { display: none; }
 
   /* 햄버거메뉴 버튼 클릭 시 lnb 출력하는 토글 */
@@ -153,4 +146,8 @@ footer {  height: 70px; padding-top: 10px; background: #000; text-align: center;
   .lnb .lnb_set { flex-direction: row; }
   .lnb ul { flex-direction: row; }
   .lnb a { display: block; padding: 10px; color: #fff; }
+
+  section { display: flex; height: 100%; }
+
+  .pc_only_view {display: none;}
 }
